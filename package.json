@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "recordDashBoardTest": "npm run test --record --key 475e3bc8-4f7b-4185-b6e7-32a54b5bcb76",
+    "sofiTests": " npm run test --spec \"cypress//inptegration//testSofi//*\""
+  },
+  
+  "cypress-cucumber-preprocessor":{
+    "nonGlobalStepDefinitions": true
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.1.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
     "cypress-iframe": "^1.0.1"
   }
 }

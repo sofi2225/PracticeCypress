@@ -8,7 +8,7 @@ describe('Filling Form Test Suite', function () {
     beforeEach(function () {
         cy.fixture('example.json').then(function (data) {
             this.data = data
-        })
+        }) 
     })
 
     it('Filling Form Test', function () {
